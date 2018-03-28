@@ -18,7 +18,7 @@ module Spoonacular
 		def get_recipe_information_bulk(ids)
 			ids = ids.kind_of?(Array) ? ids.join(',') : ids
 			query = "ids=#{ids}"
-			method = "recipes/informationBulk"
+			method = "/recipes/informationBulk"
 			uri = Spoonacular.build_endpoint(method, query)
 			response = Spoonacular.get({key: @key, uri: uri})
 			return response
