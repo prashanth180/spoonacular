@@ -10,7 +10,8 @@ module Spoonacular
 
 		def get_recipe_information(id)
 			method = "/recipes/#{id}/information"
-			uri = Spoonacular.build_endpoint(method, "")
+			query = "includeNutrition=true"
+			uri = Spoonacular.build_endpoint(method, query)
 			response = Spoonacular.get({key: @key, uri: uri})
 			return response
 		end
