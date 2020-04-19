@@ -1,6 +1,6 @@
 module Spoonacular
 
-	BASE_PATH = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com"
+	BASE_PATH = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
 
 	def self.build_endpoint(method, query)
 		return "#{BASE_PATH}#{method}?#{query}"
